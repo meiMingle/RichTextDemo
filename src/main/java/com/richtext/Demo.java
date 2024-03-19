@@ -30,6 +30,11 @@ public class Demo {
             rts.append("模1");
             rts.append("块1", (XSSFFont) font);
 
+            SXSSFCell cell1 = row0.createCell(3);
+            WPSXSSFRichTextString rts1 = new WPSXSSFRichTextString("模块2");
+            rts1.applyFont(font);
+            cell1.setCellValue(rts1);
+
             cell0.setCellValue(rts);
             workbook.write(fos);
         } catch (Exception e) {
